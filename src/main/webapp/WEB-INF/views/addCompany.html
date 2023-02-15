@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{save}" th:object="${newComp}">
+    <div>
+    <label for="name">name</label>
+    <input type="text" th:field="*{name}" id = "name">
+    </div>
+    <div>
+        <label for="country">country</label>
+        <input type="text" th:field="*{country}" id = "country">
+    </div>
+    <div>
+        <label for="img">img</label>
+        <input type="text" th:field="*{image}" id = "img">
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
